@@ -1,0 +1,16 @@
+.noidung{
+	width: 100%;
+	
+	margin-top: 100px;
+	padding-left: 10px;
+}
+.noidung img{
+	width: 100%;
+	height: 500px;
+}
+.lienquan{
+	width: 100%;
+	height: 300px;
+	margin-top: 100px;
+	background-color: red;
+}
