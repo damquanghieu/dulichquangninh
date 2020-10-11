@@ -84,6 +84,7 @@ View::composer('*', function($view)
 
 
 Route::get('trangchu', 'UIController@trangchu');
+Route::get('/', 'UIController@trangchu');
 Route::get('loaitin/{id}','UIController@loaitin');
 Route::get('chitiet/{id}', 'UIController@chitiet')->name('test');
 
