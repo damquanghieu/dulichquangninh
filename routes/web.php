@@ -35,9 +35,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'adminLogin'], function () {
         Route::group(['prefix' => 'posts'], function () {
             Route::get('listposts', 'PostsController@getPosts')->name('get.list.posts')->middleware('can:viewposts');
             Route::get('listpost/{id}', 'PostsController@getPost')->name('get.one.post')->middleware('can:viewposts');
-            Route::get('addposts', 'PostsController@getAddPost')->middleware('can:addposts');
+            Route::get('addposts', 'PostsController@getAddPost')->name('get.add.posts')->middleware('can:addposts');
             Route::post('addtintuc', 'PostsController@postAddPost')->name('post.add.posts');
-            route::get('editposts/{id}', 'PostsController@getEditPost')->middleware('can:editposts');
+            route::get('editposts/{id}', 'PostsController@getEditPost')->name('get.edit.posts')->middleware('can:editposts');
             route::post('editposts', 'PostsController@postEditPost')->name('post.edit.posts');
             Route::delete('delete-multiple-tintuc', 'PostsController@deleteMultiple')->name('delete-multiple-posts')->middleware('can:deleteposts');
 

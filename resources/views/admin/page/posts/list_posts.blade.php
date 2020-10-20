@@ -23,11 +23,10 @@
                 data-url="">{{ __('Delete') }}</button>
 
             <div style="margin-bottom: 10px;" class="btn btn-primary btn-xs">
-                <a style="padding: 5px;color: white;text-decoration: none;" href="addposts
-                                ">{{ __('Add') }}</a>
+                <a style="padding: 5px;color: white;text-decoration: none;" href="{{route('get.add.posts')}}">Thêm</a>
             </div>
             <!-- /.col-lg-12 -->
-            <table style="max-width: 1000px;" class="table table-striped table-bordered table-hover"
+            <table style=" max-width: 1000px;" class="table table-striped table-bordered table-hover"
                 id="dataTables-example">
                 <thead>
                     <tr align="center">
@@ -53,12 +52,14 @@
                         <td>
                             <img style="width: 130px; height: 80px;" src="{{asset('tintuc_image/'.$listPosts->image)}}">
                         </td>
-                        <td style="max-width: 540px; max-height: 100px; overflow:hidden;">{!! $listPosts ->content !!}
+                        <td style="max-width: 540px; max-height: 100px; overflow:hidden;">{!! $listPosts ->content
+                            !!}
                         </td>
                         <td>{{ $listPosts->categories->name}}</td>
                         <td>{{ $listPosts ->updated_at }}</td>
                         <td style="margin:10px auto ;  " class="btn btn-primary btn-xs">
-                            <a style="color: white;" href="editposts/{{$listPosts->id}}"> Sửa</a>
+                            <a style="color: white;" href="{{route('get.edit.posts',['id' =>$listPosts->id])}}">
+                                Sửa</a>
                         </td>
                     </tr>
                     @endforeach
