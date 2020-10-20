@@ -43,12 +43,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'adminLogin'], function () {
 
         });
         Route::group(['prefix' => 'slide'], function () {
-            Route::get('listslide', 'SlideController@getSlide')->middleware('can:viewslide');
-            Route::get('addslide', 'SlideController@getAddSlide')->middleware('can:addslide');
+            Route::get('listslide', 'SlideController@getSlide');
+            Route::get('addslide', 'SlideController@getAddSlide');
             Route::post('addslide', 'SlideController@postAddSlide')->name('post.add.slide');
-            route::get('editslide/{id}', 'SlideController@getEditSlide')->middleware('can:editslide');
+            route::get('editslide/{id}', 'SlideController@getEditSlide');
             route::post('editslide', 'SlideController@postEditSlide')->name('post.edit.slide');
-            Route::delete('delete-multiple-slide', 'SlideController@deleteMultiple')->name('delete-multiple-slide')->middleware('can:deleteslide');
+            Route::delete('delete-multiple-slide', 'SlideController@deleteMultiple')->name('delete-multiple-slide');
         });
 
         Route::group(['prefix' => 'user'], function () {
