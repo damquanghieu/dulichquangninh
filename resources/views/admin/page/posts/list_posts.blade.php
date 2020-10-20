@@ -53,7 +53,8 @@
                         <td>
                             <img style="width: 130px; height: 80px;" src="{{asset('tintuc_image/'.$listPosts->image)}}">
                         </td>
-                        <td style="text-align: justify; ">{!! $listPosts ->content !!}</td>
+                        <td style="max-width: 540px; max-height: 100px; overflow:hidden;">{!! $listPosts ->content !!}
+                        </td>
                         <td>{{ $listPosts->categories->name}}</td>
                         <td>{{ $listPosts ->updated_at }}</td>
                         <td style="margin:10px auto ;  " class="btn btn-primary btn-xs">

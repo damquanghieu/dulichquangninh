@@ -22,7 +22,7 @@
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i>{{$userLogin->name}}</a>
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i>{{$userLogin->email}}</a>
                     </li>
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> {{ __('Cài đặt') }} </a>
                     </li>
@@ -99,7 +99,7 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-                   
+
                     @can('viewrole')
                     <li>
                         <a href="#"><i class="fa fa-users fa-fw"></i> {{ __('Quản lý tài khoản') }}<span
@@ -113,8 +113,8 @@
                         <!-- /.nav-second-level -->
                     </li>
                     @endcan
-                   
-                   
+
+
                     @can('viewrole')
                     <li>
                         <a href="#"><i class="fa fa-users fa-fw"></i>Quản lý phân quyền<span
@@ -132,7 +132,7 @@
                     </li>
                     @endcan
 
-                    
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

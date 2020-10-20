@@ -35,14 +35,16 @@
                         <label>Email: </label>
                         <input type="email" class="form-control" name="email" placeholder="Nhập Email" />
                     </div>
-                    <select class="js-example-basic-multiple form-control" name="roles[]"  multiple="multiple">
+                    <select class="js-example-basic-multiple form-control" name="roles[]" multiple="multiple">
                         @foreach ($roles as $role)
                         <option value="{{ $role->id }}">{{ $role->name }}</option>
                         @endforeach
                     </select>
+                    <div style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                    </div>
 
-                    <button type="submit" class="btn btn-primary">Thêm</button>
-                    <button type="reset" class="btn btn-default">Reset</button>
                     <form>
             </div>
         </div>

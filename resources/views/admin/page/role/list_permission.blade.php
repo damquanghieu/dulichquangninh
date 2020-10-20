@@ -8,22 +8,6 @@
                     <small>Role</small>
                 </h1>
             </div>
-            @if(session('thongbao'))
-            <div class="alert alert-success">
-                {{session('thongbao')}}
-            </div>
-            @endif
-            @if(session('canhbao'))
-            <div class="alert alert-danger">
-                {{session('canhbao')}}
-            </div>
-            @endif
-            <button id="delete-all-role" style="margin: 5px;" class="btn btn-danger btn-xs "
-                data-url="">{{ __('Delete') }}</button>
-            <div style="margin: 5px;" class="btn btn-success btn-xs">
-                <a style="padding: 5px;color: white;text-decoration: none;"
-                    href="{{route('get.add.role')}}">{{ __('Add') }}</a>
-            </div>
             <!-- /.col-lg-12 -->
             <div class="test">
 

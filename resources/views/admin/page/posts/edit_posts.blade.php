@@ -10,7 +10,7 @@
                 </h1>
             </div>
             <!-- /.col-lg-12 -->
-            <div class="col-lg-7" style="padding-bottom:120px">
+            <div class="col-lg-12" style="padding-bottom:120px">
                 @if(count($errors)>0)
                 <div class="alert alert-danger">
                     @foreach($errors->all() as $err)
@@ -28,8 +28,10 @@
                         <input class="form-control" name="address" value="{{$editPost->address}}" />
                         <label style="margin-top: 20px;">Ảnh hiện tại</label>
                         <div>
-                            <img style="width:300px; height: 180px; border-radius: 4px;" src="{{asset('tintuc_image/'.$editPost->image)}}">
-                            <input style="margin-top: 15px;" type="file" class="form-control" name="image"value="{{$editPost->anh}}" />
+                            <img style="width:300px; height: 180px; border-radius: 4px;"
+                                src="{{asset('tintuc_image/'.$editPost->image)}}">
+                            <input style="margin-top: 15px;" type="file" class="form-control" name="image"
+                                value="{{$editPost->anh}}" />
                         </div>
                         <label style="margin-top: 20px;">Nội dung</label>
                         <textarea id="demo" class="form-control ckeditor" rows="10" name="content"

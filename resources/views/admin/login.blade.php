@@ -8,31 +8,44 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Admin-Login</title>
     <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #8ebcec;
-        font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8ebcec;
+            font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
 
-    #form-admin-login {
-        background-color: #6c9de0;
-        width: 400px;
-        height: 400px;
-        margin-top: 150px;
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-    }
+        #form-admin-login {
+            background-color: #6c9de0;
+            width: 600px;
+            height: 430px;
+            margin-top: 150px;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
 
-    h2 {
-        text-align: center;
-        margin-bottom: 40px;
-    }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-    a {
-        color: white;
-    }
+        .form-group {
+            margin-top: 30px;
+        }
+
+        a {
+            color: white;
+        }
+
+        #btn-login {
+            margin-top: 30px;
+            margin-left: 225 px;
+        }
+
+        .thong-bao {
+            margin-top: 100px;
+        }
     </style>
 </head>
 
@@ -42,32 +55,27 @@
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
-            @if(count($errors)>0)
-            <div class="alert alert-danger">
-                @foreach($errors->all() as $err)
-                {{$err}}<br>
-                @endforeach
-            </div>
-            @endif
-
             @if(session('thongbao'))
-            <div class="alert alert-danger">
+            <div style="margin-top: 30px; position: absolute;" class="col-md-6 alert alert-danger">
                 {{session('thongbao')}}
             </div>
             @endif
-            <form id="form-admin-login" action="login" method="post" class="user">
+
+            <form id="form-admin-login" action="{{route('post.login')}}" method="post" class="user">
                 {!! csrf_field() !!}
                 <h2>Login</h2>
                 <div class="form-group">
+                    <Label for="exampleInputEmail">Email:</Label>
                     <input type="text" class="form-control form-control-user" id="exampleInputEmail"
                         aria-describedby="emailHelp" name="email" placeholder="Enter Email Address... ">
                 </div>
 
                 <div class="form-group">
+                    <Label for="exampleInputEmail">Password:</Label>
                     <input type="password" class="form-control form-control-user" id="exampleInputPassword"
                         name="password" placeholder="Password">
                 </div>
-                <input type="submit" value="Đăng nhập" class="btn btn-primary btn-user btn-block">
+                <input id="btn-login" type="submit" value="Đăng nhập" class="btn btn-primary">
                 <hr>
             </form>
         </div>

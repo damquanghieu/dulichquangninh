@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Post;
 use DB;
 use Illuminate\Http\Request;
 
@@ -16,7 +15,7 @@ class CategoryController extends Controller
 
         $listCategory = Category::all();
         // $countCategory = Category::all()-;
-       
+
         return view('admin.page.category.list_category', ['listCategory' => $listCategory]);
 
     }
@@ -27,14 +26,13 @@ class CategoryController extends Controller
     }
     public function postAddCategory(Request $request)
     {
-        $this->validate($request,
+        $this->validate($request, [
+            'name' => 'required|min:1|max:40',
+        ],
             [
-                'name' => 'required|max:400|min:1',
-            ],
-            [
-                'name.required' => 'Tên danh mục không được trống',
-                'name.min' => 'Tên danh mục lớn hơn hoặc bằng 1 kí tự',
-                'name.max' => 'Tên danh mục nhỏ hơn 400 kí tự',
+                'name.required' => 'Bạn chưa nhập tên danh mục',
+                'name.min' => 'Tên danh mục phải lớn hơn 1 kí tự',
+                'name.max' => 'Tên danh mục phải nhỏ hơn 40 kí tự',
             ]);
 
         $category = new Category;
@@ -70,7 +68,7 @@ class CategoryController extends Controller
         Category::whereIn('id', $request->idsArr)->delete();
         return response()->json(['status' => true, 'message' => "Xóa thành công."]);
         // return $request->idsArr;
-       
+
     }
 
     // public function changeAction($id)

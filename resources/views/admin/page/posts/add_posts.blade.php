@@ -33,8 +33,7 @@
                         <label style="margin-top: 20px;">Ảnh</label>
                         <input type="file" class="form-control" name="image" placeholder="Ảnh" />
                         <label style="margin-top: 20px;">Nội dung</label>
-                        <textarea name="content" placeholder="Nội dung" id="editer1" rows="30">
-                    </textarea>
+                        <textarea id="demo" class="form-control ckeditor" rows="10" name="content"></textarea>
                         <label style="margin-top: 20px;">Thuộc danh mục</label>
                         <div class="form-group">
                             <select class="form-control" id="sel1" name="category_id">

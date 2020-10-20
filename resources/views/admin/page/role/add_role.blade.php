@@ -97,23 +97,4 @@
     </div>
     <!-- /.container-fluid -->
 </div>
-   <table>
-    <tr>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-    </tr>
-    @foreach ($parentPermission as $parent)
-        {{$test = $parent->child}}
-        <tr>
-           <td>{{$test[display_name]}}</td>
-           <td>{{$test[display_name]}}</td>
-           <td>{{$test[display_name]}}</td>
-           <td>{{$test[display_name]}}</td>
-        </tr>
-    @endforeach
-   </table>
-
-
 @endsection

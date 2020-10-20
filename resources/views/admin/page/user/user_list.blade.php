@@ -47,7 +47,9 @@
                         <td>{{ $user->super_admin}}</td>
                         <td>{{ $user->created_at }}</td>
                         <td>{{ $user->updated_at }}</td>
-                        <td><a href="{{route('get.edit.user',['id'=> $user->id])}}">Edit</a></td>
+                        <td><a class="btn btn-primary btn-sm"
+                                href="{{route('get.edit.user',['id'=> $user->id])}}">Edit</a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
