@@ -48,7 +48,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'adminLogin'], function () {
             Route::post('addslide', 'SlideController@postAddSlide')->name('post.add.slide');
             route::get('editslide/{id}', 'SlideController@getEditSlide');
             route::post('editslide', 'SlideController@postEditSlide')->name('post.edit.slide');
-            Route::delete('delete-multiple-slide', 'SlideController@deleteMultiple')->name('delete-multiple-slide');
+            Route::delete('delete-multiple-slide', 'SlideController@deleteMultiple')->name('delete-multiple-slide')->middleware('can:deleteslide');
         });
 
         Route::group(['prefix' => 'user'], function () {
@@ -81,5 +81,3 @@ Route::get('trangchu', 'UIController@trangchu');
 Route::get('/', 'UIController@trangchu');
 Route::get('loaitin/{id}', 'UIController@loaitin');
 Route::get('chitiet/{id}', 'UIController@chitiet')->name('test');
-
-Route::get('testdel', 'RoleController@delete');
