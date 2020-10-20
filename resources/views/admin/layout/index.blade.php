@@ -64,7 +64,7 @@
     <script src="{{asset('admin1/dist/js/sb-admin-2.js')}}"></script>
 
     <!-- DataTables JavaScript -->
-    <script src="{{asset('admin1/bower_components/DataTables/media/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin1/bower_components/datatables/media/js/jquery.dataTables.min.js')}}"></script>
     <script
         src="{{asset('admin1/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js')}}">
     </script>
