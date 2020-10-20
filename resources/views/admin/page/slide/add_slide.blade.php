@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="page-header">
-                    Thêm tin tức
+                    Thêm Slie
                 </h1>
             </div>
             <!-- /.col-lg-12 -->
