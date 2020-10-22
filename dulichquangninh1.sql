@@ -6,6 +6,7 @@
 -- Thời gian đã tạo: Th7 15, 2020 lúc 10:21 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.3.0
+-- Phiên bản PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
